@@ -24,7 +24,7 @@ public class Human extends Player
         {
             do
             {
-                System.out.print("Line: ");
+                System.out.print("Row: ");
                 attempt[0] = input.nextInt();
                 
                 if( attempt[0] > 3 ||attempt[0] < 1)
@@ -53,4 +53,3 @@ public class Human extends Player
         while( !checkTry(attempt, board) );
     }
 }
-

@@ -1,9 +1,17 @@
+import java.util.ArrayList;
+
 public class Board 
 {
-    private int[][] Board= new int[3][3];
+    private static int Row = 0;
+    private static int column = 0;
+
+	private int[][] Board= new int[3][3];
+    
+    ArrayList myArray = new ArrayList();
     
     public Board()
     {
+   
         clearBoard();
     }
     
@@ -14,24 +22,31 @@ public class Board
                 Board[line][column]=0;
     }
     
-    public void showBoard()
+    public void callGrid()
     {
+	myArray.add(Board[Row][column]==1);
+	
+    }
+    
+    public void showBoard()
+    	{
+    
         System.out.println();
-        for(int line=0 ; line<3 ; line++)
+        for(int Row=0 ; Row<3 ; Row++)
         {
         
             for(int column=0 ; column<3 ; column++)
             {
                 
-                if(Board[line][column]==-1)
+                if(Board[Row][column]==-1)
                 {
                     System.out.print(" X ");
                 }
-                if(Board[line][column]==1)
+                if(Board[Row][column]==1)
                 {
                     System.out.print(" O ");
                 }
-                if(Board[line][column]==0)
+                if(Board[Row][column]==0)
                 {
                     System.out.print("  ");
                 }

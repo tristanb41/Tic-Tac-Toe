@@ -22,17 +22,12 @@ public class Game
         System.out.println("Who will be player1 ?");
         if(choosePlayer() == 1)
             this.player1 = new Human(1);
-        else
-            this.player1 = new Computer(1);
         
         System.out.println("----------------------");
         System.out.println("Who will be Player 2 ?");
         
         if(choosePlayer() == 1)
             this.player2 = new Human(2);
-        else
-            this.player2 = new Computer(2);
-        
     }
     
     public int choosePlayer()
@@ -42,12 +37,11 @@ public class Game
         do
         {
             System.out.println("1. Human");
-            System.out.println("2. Computer\n");
-            System.out.print("Option: ");
+            System.out.print("Your selection is: ");
             option = input.nextInt();
             
             if(option != 1 && option != 2)
-                System.out.println("Invalid Option! Try again");
+                System.out.println("Invalid Selection! Try again");
         }
         while(option != 1 && option != 2);
         
